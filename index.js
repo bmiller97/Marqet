@@ -1,3 +1,4 @@
+//I used a chatkit tutorial for this
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
