@@ -1,5 +1,5 @@
-<?php
-$connect = mysql_connect(“”, “admin_name”, “password”); if (!connect) { die('Connection Failed: ' . mysql_error());
+<script>
+var objconnect = mysql_connect(“”, “admin_name”, “password”); if (!objconnect) { die('Connection Failed: ' . mysql_error());
 { mysql_select_db(“database_name”, $connect);
 
 $book_info = "INSERT INTO table_name(name, price, description)VALUES('$_POST[name]','$_POST[price]')",
@@ -10,4 +10,5 @@ die('Error: ' .mysql_error());
 echo"Book successfully added to database";
 
 mysql_close($connect);?>
+
 
