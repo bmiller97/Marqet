@@ -1,14 +1,16 @@
-<script>
-var objconnect = mysql_connect(“”, “admin_name”, “password”); if (!objconnect) { die('Connection Failed: ' . mysql_error());
-{ mysql_select_db(“database_name”, $connect);
+var mysql = require('mysql');
 
-$book_info = "INSERT INTO table_name(name, price, description)VALUES('$_POST[name]','$_POST[price]')",
-if(!mysql_query($user_info,$connect))
-{
-die('Error: ' .mysql_error());
-}
-echo"Book successfully added to database";
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "yourusername",
+  password: "yourpassword",
+  database: "mydb"
+});
 
-mysql_close($connect);?>
-
-
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+  var sql = "INSERT INTO books (Item Name, Price, Description, Contact) VALUES ?";cocon.query(sql, [values], function(err, result){
+if (err) throw err;
+});
+});
