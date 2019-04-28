@@ -1,11 +1,111 @@
 <!doctype html>
 
-<html>
+<html lang="en">
+<head>
+  <title>Add Book Listing</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script>
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+}
+</script>  
+	<script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDTsFKTGUHqQ4mYGGomFmcDyDpP781DaHs",
+    authDomain: "marqet-1df05.firebaseapp.com",
+    databaseURL: "https://marqet-1df05.firebaseio.com",
+    projectId: "marqet-1df05",
+    storageBucket: "marqet-1df05.appspot.com",
+    messagingSenderId: "988423971651"
+  };
+  firebase.initializeApp(config);
+</script>
+<style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    .boxed {
+ 	 border: 1px solid green ;
+	   }
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+</head>
 <body>
 
-<h2>New Book Listing</h2>
-
-<form action = "newbooklisting.js">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <img class="navbar-brand" src = "marqetlogo.JPG" >
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="https://bmiller97.github.io/SoftwareMethodologiesProject/">Home</a></li>
+        <li><a href="https://bmiller97.github.io/SoftwareMethodologiesProject/Search.html">Search</a></li>
+        <li><a href="https://bmiller97.github.io/SoftwareMethodologiesProject/Info.html">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://bmiller97.github.io/SoftwareMethodologiesProject/login"><span class="login"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="https://bmiller97.github.io/SoftwareMethodologiesProject/FAQ.html">Frequently asked questions:</a>
+	Have any questions? Checkout our FAQ before contacting our support email!</p>
+      <p><a id = "myInput" value = "askquestions@marqet.com"</a> <button onclick = "myFunction()">Copy Email</button></p>
+      <p><a href="https://bmiller97.github.io/SoftwareMethodologiesProject/FAQ.html">Help Page</a></p>
+      <br><b><a href="https://bmiller97.github.io/SoftwareMethodologiesProject/addbooklisting.html">Add a book listing</a></b>
+     <br> <b><a href="https://bmiller97.github.io/SoftwareMethodologiesProject/addticketlisting.html">Add a ticket listing</a></b>
+    </div>
+    <div class="col-sm-8 text-left""center" style = "background-color: white"; >
+    
+	   <h2 style = "text-align: middle;">New Book Listing</h2>
+<img src = "marqetlogo.JPG" style = "width:30%; height: 30%;" align = "middle;">
+<form action = "newticketlisting.js" style = "text-align: left; background-color: white;">
   Item Name:<br>
   <input type="text" name="Ex: 2/25 Ticket" required>
   <br>
@@ -22,11 +122,19 @@
   <input type = "submit" value = "Submit Form">
   <br>
 </form>
-
-<p></p>
-
-<p></p>
+    </div><hr>
+	<div class="col-sm-2 sidenav">
+      <div class="well">
+        <p><a href = "https://bmiller97.github.io/SoftwareMethodologiesProject/ticketpage">Marquette Ticket Page</a></p>
+		<img src="https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwibpZ_YiNDgAhUd0IMKHfKmC0YQjRx6BAgBEAU&url=https%3A%2F%2Fwww.cbs58.com%2Fnews%2Fmarquette-mens-basketball-single-game-tickets-on-sale&psig=AOvVaw2LeDCq6LK5TPtH1AEB5_kR&ust=1550949868649245">
+      </div>
+      <div class="well">
+        <p><a href = "https://bmiller97.github.io/SoftwareMethodologiesProject/bookpage">Marquette Book Exchange</a></p>
+      </div> 
+	</div>
+<footer class="container-fluid text-center">
+  <p>Social Media</p>
+</footer>
 
 </body>
 </html>
-
