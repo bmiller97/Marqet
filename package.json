@@ -1,7 +1,7 @@
 {
-  "name": "live-chat-widget",
+  "name": "firebase",
   "version": "1.0.0",
-  "description": "",
+  "description": "Software Methodologies Project https://bmiller97.github.io/SoftwareMethodologiesProject/ https://bmiller97.github.io/SoftwareMethodologiesProject/Info.html",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,5 +12,14 @@
     "@pusher/chatkit-server": "^1.0.4",
     "express": "^4.16.4",
     "uuid": "^3.3.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmiller97/SoftwareMethodologiesProject.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bmiller97/SoftwareMethodologiesProject/issues"
+  },
+  "homepage": "https://github.com/bmiller97/SoftwareMethodologiesProject#readme"
 }
