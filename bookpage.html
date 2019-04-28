@@ -1,1 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Textbook Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+    .column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  border-style:solid;
+  border-width: 5px;
+  border-color:black;
+  border-radius:5px;
+  column-gap:5x;
+  background-color: grey;
+  font-color: black;
+  
+  
+  
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+  </style>
+</head>
+<body>
 
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+    </div>
+    <div class="col-sm-8 text-left"> 
+      <div class="row">
+      <br>
+  <div class="column" style="background-color: light-grey;" style = "font-family:georgia,garamond,serif;font-size:16px;font-style:italic;">
+    <h2>Chem 1001 Lab Book</h2>
+    <p>Price: $5<br>Used chemistry lab book, message me for questions<br>Contact: william.youman@marquette.edu</p>
+  </div>
+  <div class="column" style="background-color:light-grey;">
+    <h2>Biol 1002 Textbook</h2>
+    <p>Price: $150 <br>Bio 2 textbook with connect access<br>Contact: richard@marquette.edu</p>
+  </div>
+</div>
+ <br>
+<div class="row">
+  <div class="column" style="background-color:grey;">
+    <h2>Phys 1013 Book</h2>
+    <p>Price: $50 <br>Physics book for physics 1 some pages are ripped<br>Contact: blakevanniel@marquette.edu</p>
+  </div>
+  <div class="column" style="background-color:grey;">
+    <h2>Romeo and Juliet</h2>
+    <p>Price: $5 <br>Nearly new condition<br>Contact: carlos.gonzalez@marquette.edu </p>
+  </div>
+</div>
+    </div>
+    <script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+// Declare a loop variable
+var i;
+// List View
+function listView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.width = "100%";
+        //elements[i].style.border-color = blue;
+        /*if(i%2 == 1)
+        elements[i].style.background-color = gold;
+        else
+        elements[i].style.background-color = blue;*/
+  }
+}
+// Grid View
+function gridView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.width = "50%";
+        elements[i].style.border = 5px;
+        /*if(i%2 == 0)
+        elements[i].style.background-color = blue;
+        else*/
+          }
+}
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+      <p><a href = "#">Marquette Ticket Page</a></p>
+          <img src="https://www.google.com/url?sa=i&source=images&cd=&cad=rja&
+uact=8&ved=2ahUKEwibpZ_YiNDgAhUd0IMKHfKmC0YQjRx6BAgBEAU&url=https%3A%2F%2Fwww.cbs58.
+com%2Fnews%2Fmarquette-mens-basketball-single-game-tickets-on-sale&psig=AOvVaw2LeDCq
+6LK5TPtH1AEB5_kR&ust=1550949868649245">
+      </div>
+      <div class="well">
+        <p><a href = "#">Marquette Book Exchange</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="container-fluid text-center">
+  <p>Marqet</p>
+</footer>
+</body>
+</html>
