@@ -1,4 +1,4 @@
-var mysql = require('mysql');
+/*var mysql = require('mysql');
 
 var con = mysql.createConnection({
   host: "localhost",
@@ -14,4 +14,38 @@ con.connect(function(err) {
   cocon.query(sql, [values], function(err, result){
 if (err) throw err;
 });
+});*/
+var config = {
+    apiKey: "AIzaSyDTsFKTGUHqQ4mYGGomFmcDyDpP781DaHs",
+    authDomain: "marqet-1df05.firebaseapp.com",
+    databaseURL: "https://marqet-1df05.firebaseio.com",
+    projectId: "marqet-1df05",
+    storageBucket: "marqet-1df05.appspot.com",
+    messagingSenderId: "988423971651"
+  };
+  firebase.initializeApp(config);
+var messagesRef = firebase.database().ref(messages);
+
+document.getElementById('ticketlisting').addEventListener('submit',
+submitForm);
+function submitForm(e){
+e.preventDefault();
+var title = getInputVal('Title');
+var price = getInputVal('Price');
+var description = getInputVal('Description');
+var contact = getInputVal('Contact');
+//saving info from form
+saveMessage(title, price, description, contact);
+}
+function getInputVal(id){
+return document.getElementById(id).value;
+}
+function saveMessage(title, price, description, contact){
+var newMessageRef = messagesRef.push();
+newMessageRef.set({
+title: title
+price: price
+description: description
+contact: contact
 });
+}
