@@ -1,4 +1,7 @@
-  var config = {
+const firebase = require("firebase");
+// Required for side-effects
+require("firebase/firestore"); 
+var config = {
     apiKey: "AIzaSyDTsFKTGUHqQ4mYGGomFmcDyDpP781DaHs",
     authDomain: "marqet-1df05.firebaseapp.com",
     databaseURL: "https://marqet-1df05.firebaseio.com",
